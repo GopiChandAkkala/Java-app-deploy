@@ -1,3 +1,5 @@
+@Library('jenkins-shared-library') _
+
 pipeline{
 
     agent any
@@ -7,7 +9,10 @@ pipeline{
             steps{
                 
                 script{
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/GopiChandAkkala/Java-app-deploy.git'
+                    gitCheckout{
+                        branch: "main"
+                        url: "https://github.com/GopiChandAkkala/Java-app-deploy.git"
+                    }
                 }
             }
             
