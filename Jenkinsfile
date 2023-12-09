@@ -9,10 +9,10 @@ pipeline{
             steps{
                 
                 script{
-                    gitCheckout{
+                    gitCheckout(
                         branch: "main"
                         url: "https://github.com/GopiChandAkkala/Java-app-deploy.git"
-                    }
+                    )
                 }
             }
             
