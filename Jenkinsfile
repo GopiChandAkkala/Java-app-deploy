@@ -99,6 +99,15 @@ pipeline{
                 }
             }
         }
+
+        stage("Docker Image Clean"){
+            when { expression { params.action == 'create'}}
+            steps{
+                script{
+                    dockerImageClean("${params.DockerHubUser}","${params.ProjectName}","${params.ImageTag}")
+                }
+            }
+        }
     }
     
 }
