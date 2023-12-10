@@ -10,6 +10,11 @@ pipeline{
         string(name: 'ProjectName', description: 'Enter the Project Name', defaultValue: 'java-app')
         string(name: 'ImageTag', description: 'Enter Tag for Image', defaultValue: 'v1')
     }
+    
+    environment {        
+        AWS_ACCESS_KEY_ID = credentials('access-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+    }
 
     stages{
         stage("Git Checkout"){
