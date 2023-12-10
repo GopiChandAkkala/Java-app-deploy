@@ -1,5 +1,5 @@
 resource "aws_security_group" "my_sp" {
-   name = "Python-app-sgp"
+   name = "java-app-sgp"
    
    ingress {
      from_port = 80
