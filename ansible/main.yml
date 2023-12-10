@@ -56,4 +56,4 @@
         state: started
         detach: yes
         ports:
-          - "8081:8080"
+          - "8080:8080"
